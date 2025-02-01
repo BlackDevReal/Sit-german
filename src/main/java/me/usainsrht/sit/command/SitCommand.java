@@ -15,18 +15,18 @@ public class SitCommand extends Command {
 
     @Override
     public boolean execute(CommandSender sender, String command, String[] args) {
-        if (sender.hasPermission("sit.command"))
+        if (sender.hasPermission("sitzen.command"))
         {
             if (args.length == 0) {
-                sender.sendMessage("/sit reload");
+                sender.sendMessage("/sitzen neuladen");
             }
-            else if (args[0].equalsIgnoreCase("reload")) {
+            else if (args[0].equalsIgnoreCase("neuladen")) {
                 Sit.getInstance().reloadConfig();
 
-                sender.sendMessage(ChatColor.GREEN+"config reloaded succesfully");
+                sender.sendMessage(ChatColor.GREEN+"die configuration wurde erfolreich neugeladen.");
             }
             else {
-                sender.sendMessage("/sit reload");
+                sender.sendMessage("/sitzen neuladen");
             }
         }
         return true;

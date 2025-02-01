@@ -22,9 +22,9 @@ public final class Sit extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new InteractListener(), this);
         getServer().getPluginManager().registerEvents(new DismountListener(), this);
 
-        CommandHandler.register(new SitCommand("sit",
-                "command to reload plugin's config",
-                "/sit reload",
+        CommandHandler.register(new SitCommand("sitzen",
+                "command um die config neu zu laden",
+                "/sitzen neuladen",
                 Collections.emptyList()));
     }
 
